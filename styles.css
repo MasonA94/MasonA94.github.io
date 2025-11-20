@@ -1,6 +1,11 @@
+
+/* This file was tweaked and refactored with ChatGPT */
+
 body {
     background: #F2E5D5;
-    font-family: Arial, Helvitica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -15,31 +20,80 @@ h2 {
 p {
     color: black;
 }
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-
 .projects {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: left;
+    justify-content: flex-start;
+    align-items: stretch;
     padding: 0;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
 .project {
     flex: 1 1 calc(33.333% - 20px);
     min-width: 240px;
     max-width: 400px;
-    padding: 20px;
     background: #A69853;
     border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.project img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+body {
+    background: #F2E5D5;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 0 0 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.projects > h2 {
+    flex: 1 1 100%;
+    margin: 0 0 8px 0;
+}
+
+
+.project {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 240px;
+    max-width: 400px;
+    background: #A69853;
+    border-radius: 12px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    justify-content: flex-start;
 }
 
 .project img {
@@ -47,5 +101,5 @@ p {
     height: auto;
     display: block;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
 }
